@@ -1,0 +1,46 @@
+from ctypes.wintypes import COLORREF
+from tkinter import *
+from tkinter.font import BOLD 
+import pyautogui as pu
+
+def autoClick():
+    for x in range(2):
+        pu.press("Win")
+        pu.leftClick(1158, 1074)
+        pu.leftClick(233, 47)
+    pu.typewrite('https://hentai-time.com/')
+    for x in range(2):
+        pu.press('Enter')
+
+def auto1Click():
+    for x in range(2):
+        pu.press("Win")
+        pu.leftClick(1158, 1074)
+        pu.leftClick(233, 47)
+    pu.typewrite('https://www.pornhub.com')
+    for x in range(2):
+        pu.press('Enter')
+
+
+window = Tk()
+window.title("Pornhub")
+window.geometry('1000x500')
+window.config(background="White")
+hentai_time = Button(text="HentaiTime",
+ fg="#FFA07A",
+ bg="#D2B48C",
+ font=("",
+ 20, BOLD),
+ command=autoClick)
+hentai_time.grid(column=0, row=0)
+porn_hub = Button(text="PornHub",
+ fg="Orange",
+ bg="Black",
+ font=("",
+ 20, BOLD),
+ command=auto1Click)
+porn_hub.grid(column=1, row=0)
+
+
+window.mainloop()
+
