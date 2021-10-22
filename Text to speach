@@ -1,0 +1,12 @@
+from gtts import gTTS 
+import os
+
+myText = ''
+
+languge = 'en'
+
+output = gTTS(text= myText, lang=languge)
+
+output.save('output.mp3')
+os.system('start output.mp3')   
+
